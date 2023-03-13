@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mencari DOM (Mendapatkan DOM)</title>
+</head>
+<body>
+   <header>
+      <h1>Belajar Menggunakan DOM JavaScript</h1>
+      <nav>
+         <ul>
+            <li>DOM JavaScript</li>
+            <li>DOM JavaScript</li>
+            <li>DOM JavaScript</li>
+            <li>DOM JavaScript</li>
+            <li>DOM JavaScript</li>
+         </ul>
+         <form action="">
+            <input type="search" name="searching">
+            <button class="button"></button>
+         </form>
+      </nav>
+   </header>
+
+   <main class="content">
+      <article>
+         <section>
+            <h1>Gambar Undraw</h1>
+            <img id="art-picture" src="../Images/undraw_search_app_oso2.png" alt="Gambar Undraw">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius minus ipsum in distinctio tenetur laboriosam dolore laborum. Dignissimos optio dicta ullam sint itaque? Minima repellat in velit dignissimos illum.</p>
+            <button class="button"></button>
+         </section>
+      </article>
+      <article>
+         <section>
+            <h1>Gambar Undraw</h1>
+            <img src="../Images/undraw_search_app_oso2.png" alt="Gambar Undraw">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius minus ipsum in distinctio tenetur laboriosam dolore laborum. Dignissimos optio dicta ullam sint itaque? Minima repellat in velit dignissimos illum.</p>
+            <button class="button"></button>
+         </section>
+      </article>
+      <aside>
+         <h2>Profile</h2>
+         <button class="button"></button>
+      </aside>
+   </main>
+
+   <footer>
+      <i>Copyright &copy; 2023 by Ahmad Wildan</i>
+   </footer>
+
+   <script>
+      const domTree = document;
+      const getElemenHead = document.head;
+      const getElemenBody = document.body;
+      const artPicture = document.getElementById('art-picture');
+      const getByName = document.getElementsByName('searching');
+      const getByClassName = document.getElementsByClassName('button');
+      const getByTagName = document.getElementsByTagName('article');
+      const useQuerySelector = document.querySelector('.button');
+      const useQuerySelectorAll = document.querySelectorAll('.button');
+      const totalClassButton = useQuerySelectorAll.length;
+      const getByIndexing = useQuerySelectorAll[2];
+
+      for (let item of getByTagName) {
+         console.log(item);
+      }
+   </script>
+</body>
+</html>

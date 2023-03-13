@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Event Bubbling</title>
+   <style>
+      body * {
+         margin: 8px;
+         padding: 5px;
+         border: 2px solid black;
+         width: 60%;
+      }
+   </style>
+</head>
+<body>
+   <div align="center" id="langit">
+      LANGIT
+      <div align="center" id="luar">
+         LUAR
+         <div align="center" id="tengah">
+            TENGAH
+            <div align="center" id="dalam">
+               DALAM
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Konsep kerja event Bubbling adalah bergerak dari parent ke child element-nya -->
+   <script>
+      const getAllDiv = document.getElementsByTagName('div');
+      for (const item of getAllDiv) {
+         item.addEventListener('click', function() {
+            alert(`ELEMEN ${item.getAttribute('id').toUpperCase()}`);
+         }, true);
+      }
+   </script>
+</body>
+</html>

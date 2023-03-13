@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cara Memanggil Anggota BOM</title>
+</head>
+<body>
+   <h1>Belajar Cara Memanggil Anggota BOM</h1>
+   <script>
+      // Percobaan membuat method yang sama dengan method yang dimiliki object windows.
+      // Hasilnya akan mengeluarkan output pada console browser, bukan mencetak pesan alert!
+      function alert(name) {
+         console.log(`Hati-hati, ${name}!`);
+      }
+      alert('Ahmad Wildan');
+      window.alert('Ahmad Wildan');
+   </script>
+</body>
+</html>

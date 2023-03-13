@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Membuat Elemen HTML</title>
+</head>
+<body>
+   <script>
+      const titleDocument = document.createElement('h1');
+      titleDocument.innerText = 'Belajar Manipulasi Elemen HTML Menggunakan DOM';
+
+      const newImage = document.createElement('img');
+      newImage.setAttribute('src', '../Images/undraw_search_app_oso2.png');
+      newImage.setAttribute('alt', 'Gambar Diambil dari Undraw');
+      newImage.setAttribute('title', 'Gambar Undraw');
+
+      const article = document.createElement('p');
+      article.innerHTML = '<strong>Lorem ipsum</strong>, dolor sit amet consectetur adipisicing elit.';
+   </script>
+</body>
+</html>

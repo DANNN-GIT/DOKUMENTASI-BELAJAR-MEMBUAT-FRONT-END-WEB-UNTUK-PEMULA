@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BOM - Method Prompt</title>
+</head>
+<body>
+   <h1>Belajar Method Prompt</h1>
+   <h2 id="nama"></h2>
+   <h2 id="umur"></h2>
+   <h2 id="parse"></h2>
+   <script>
+      let name = prompt('Masukkan nama lengkapmu!');
+      let typename = typeof(name);
+      
+      let umur = prompt('Masukkan umur kamu sekarang!');
+      let typeumur = typeof(name);
+      
+      let parseumur = parseInt(umur);
+
+      document.getElementById('nama').innerHTML = `Nama : ${name}, '${typename}'`;
+      document.getElementById('umur').innerHTML = `Umur : ${umur}, '${typeumur}'`;
+      document.getElementById('parse').innerHTML = `Merubah tipe data umur menjadi number. Umur : ${umur}, '${typeof(parseumur)}'`;
+   </script>
+</body>
+</html>

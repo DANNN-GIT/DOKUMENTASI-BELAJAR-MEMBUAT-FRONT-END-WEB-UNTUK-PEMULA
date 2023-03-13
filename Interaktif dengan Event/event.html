@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Event World</title>
+   <style>
+      .contents {
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         border: 2px solid black;
+         padding: 15px;
+      }
+      #generateButton {
+         margin-top: 5px;
+         margin-bottom: 15px;
+      }
+   </style>
+</head>
+<body onload="eventOnload()">
+   <div class="contents" align="center" hidden>
+      <button id="incrementButton" onclick="eventOnclick()">Tekan Aku :)</button>
+      <h3>Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span></h3>
+   </div>
+   
+   <script>
+      function eventOnload() {
+         alert('Coding is not magic, but we can create magic with it!');
+         const getClassContents = document.querySelector('.contents');
+         getClassContents.removeAttribute('hidden');
+      }
+      // document.body.onload = eventOnload;
+
+      function eventOnclick() {
+         document.getElementById('count').innerText++;
+
+         if (document.getElementById('count').innerText == 7) {
+            const addH2Element = document.createElement('h2');
+            addH2Element.innerText = 'Congratulations!';
+
+            const addImgElement = document.createElement('img');
+            addImgElement.setAttribute('src', '../Images/undraw_search_app_oso2.png');
+            addImgElement.setAttribute('width', 300);
+            
+            const showContent = document.querySelector('.contents').appendChild(addH2Element).appendChild(addImgElement);
+         }
+      }
+      // document.getElementById('incrementButton').onclick = eventOnclick;
+   </script>
+</body>
+</html>
